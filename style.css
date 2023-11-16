@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #571605;
+}
+
+#header {
+  background-color: #3d0101;
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  background-color: #7c3e1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 100%;
+  z-index: 100;
+  width: 100%;
+}
+
+.blob {
+  width: 112px;
+  height: 112px;
+  display: grid;
+  background: #fff;
+  filter: blur(5.6px) contrast(10);
+  padding: 11.2px;
+  mix-blend-mode: darken;
+}
+
+.blob:before,
+.blob:after {
+  content: "";
+  grid-area: 1/1;
+  margin: 33.6px 0;
+  border-radius: 112px;
+  background: #474bff;
+  animation: bo4 2s infinite linear;
+}
+
+.blob:after {
+  --s: -1;
+}
+
+@keyframes bo4 {
+  100% {
+    transform: rotate(calc(var(--s, 1) * 1turn));
+  }
+}
+/* Responsive */
+
+@media (max-width: 768) {
+  #nav {
+    position: fixed;
+    right: 0;
+    left: 0;
+  }
+  #services .services-list .services-item img {
+    width: 75%;
+  }
+  #projects .projects-item h5 {
+    font-size: 12px;
+  }
+  #testimonials .carousel-item .carousel-content p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 640) {
+  #services .services-list .services-item {
+    margin: 25px 0;
+  }
+  #projects .projects-item img {
+    height: 360px;
+  }
+  #testimonials .carousel-item .carousel-content {
+    padding: 0 15px;
+  }
+}
+
+/*Navigation*/
+nav .navbar-brand {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #f89e87;
+}
+#navbar a {
+  font-size: 20px;
+  color: #ac7a10;
+  text-transform: uppercase;
+}
+#navbar a:hover {
+  color: #f77b7bf1;
+  border-bottom: 1px solid #fa9067;
+}
+
+/* About */
+#About {
+  position: relative;
+
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 260px 0;
+  text-align: center;
+}
+#About img {
+  width: 200px;
+  height: 200px;
+  border: 5px solid;
+  object-fit: cover;
+  -o-object-fit: cover;
+  object-position: top center;
+  -o-object-position: top center;
+  border-radius: 100px;
+  margin: 20px;
+}
+#About h1 {
+  position: relative;
+  margin: 15;
+  padding: 0;
+  color: rgb(88, 4, 4);
+  font-family: "Tealand";
+}
+#About h5 {
+  position: relative;
+  margin: 0;
+  padding: 10;
+  color: black;
+  font-size: 30px;
+  font-family: "Kenia", sans-serif;
+}
+/* Services */
+
+#services {
+  position: relative;
+  padding: 80px 0;
+  background-color: #571605;
+}
+#services h2 {
+  position: relative;
+  margin-bottom: 50px;
+  color: #dfdf22;
+  text-align: center;
+}
+#services .services-list {
+  position: relative;
+  padding: 15px 0;
+}
+#services .services-list .services-item {
+  position: relative;
+  margin-bottom: 25px;
+  text-align: center;
+}
+#services .services-list .services-item img {
+  object-fit: cover;
+  height: 250px;
+  width: 50%;
+}
+#services .services-list .services-item h3 {
+  color: #f8a02d;
+  margin: 15px 0;
+  text-transform: uppercase;
+  font-family: "Tealand";
+}
+#services .services-list .services-item p {
+  color: #fffaf7;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+#services .services-list .services-item a.btn {
+  background-color: #bd2308;
+  border: none;
+}
+#services .services-list .services-item a.btn:hover {
+  background-color: #fcf816;
+  color: #e85534;
+}
+/* Projects */
+
+#projects {
+  position: relative;
+  background-color: #cc8c26;
+  padding: 80px 0;
+}
+#projects h2 {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #5f070fc0;
+  font-family: "Kenia", sans-serif;
+}
+#projects .projects-item {
+  position: relative;
+  margin: 25px 0;
+}
+#projects .projects-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  -o-object-fit: cover;
+  object-position: top center;
+  -o-object-position: top center;
+  margin-bottom: 15px;
+}
+#projects .projects-item h3 {
+  position: relative;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  margin: 0;
+}
+#projects .projects-item h5 {
+  position: relative;
+  color: maroon;
+  font-size: 16px;
+}
+/* Testimonials */
+#testimonials {
+  position: relative;
+  padding: 195px 0;
+  margin-bottom: 100px;
+  background-color: #571605;
+}
+#testimonials h2 {
+  position: relative;
+  margin-bottom: 50px;
+  color: #c6e612;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+}
+#testimonials .carousel-item .carousel-content {
+  text-align: center;
+  padding: 0 100px;
+}
+#testimonials .carousel-item .carousel-content img {
+  width: 160px;
+  border: 4px solid #f2f5ecf1;
+  margin-bottom: 15px;
+}
+#testimonials .carousel-item .carousel-content h5 {
+  color: #f5b221;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#testimonials .carousel-item .carousel-content p {
+  font-size: 20px;
+  color: #fcfbfbc0;
+  font-family: "Times New Roman", Times, serif;
+}
+#testimonials .carousel-item .carousel-content h6 {
+  font-size: 15px;
+  color: #b5cc30;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Contact */
+#contact {
+  position: relative;
+  padding: 200px 0;
+  background-color: #cc8c26;
+}
+#contact h2 {
+  text-align: center;
+  font-family: "Kenia", sans-serif;
+}
+#contact form {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+#contact form label {
+  color: #b94100;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Oswal", sans-serif;
+  font-size: 15px;
+}
+#contact
+  form
+  input
+  [type="text"]
+  #contact
+  form
+  input
+  [type="email"]
+  #contact
+  form
+  textarea {
+  position: relative;
+  padding: 8px 10px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border: 2p solid #e6dfdd;
+}
+#contact form button[type="submit"] {
+  position: relative;
+  display: block;
+  width: 50%;
+  background-color: #812c12;
+  color: #b3ce3c;
+  border: 2px solid #1d110a;
+  margin: 15px auto;
+}
+#contact form button [type="submit"] :hover {
+  background-color: transparent;
+  color: #d3d4c8;
+}
+
+/* map */
+
+#maps {
+  position: relative;
+  height: fit-content;
+  margin-bottom: 0;
+}
+
+#maps iframe {
+  padding-bottom: 0;
+}
+
+/* Footer */
+#footer {
+  position: relative;
+  padding: 0;
+  background-color: #31210c;
+}
+#footer p {
+  position: relative;
+  text-align: center;
+  color: #ccdd7f;
+  font-weight: 600;
+  margin: 0;
+}
