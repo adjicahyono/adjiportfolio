@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
 }
 
 #header {
+  max-width: 100%;
   background-color: #3d0101;
 }
 
@@ -70,11 +72,19 @@ body {
   #projects .projects-item h5 {
     font-size: 12px;
   }
+
   #testimonials .carousel-item .carousel-content p {
     font-size: 16px;
   }
 }
 @media (max-width: 640) {
+  * {
+    overflow-x: hidden;
+  }
+  .header {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
   #services .services-list .services-item {
     margin: 25px 0;
   }
@@ -93,7 +103,7 @@ nav .navbar-brand {
   font-weight: 700;
   color: #f89e87;
 }
-#navbarNav a{
+#navbarNav a {
   font-size: 20px;
   color: #9e7110;
   text-transform: uppercase;
